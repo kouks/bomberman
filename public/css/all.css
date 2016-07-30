@@ -290,5 +290,22 @@ table.table-simple tbody tr:nth-child(odd) {
 /**
  * 5.0 - Page contents
  */
+#map .map-container {
+  margin: 50px auto;
+  width: 900px;
+  height: calc(780px);
+}
+#map .map-container .tile {
+  width: calc(6.66666667%);
+  height: calc(7.69230769%);
+  float: left;
+  background-size: cover;
+}
+#map .map-container .tile.floor {
+  background: url('/img/texture_floor.jpg') center center;
+}
+#map .map-container .tile.wall {
+  background: url('/img/texture_wall.jpg') center center;
+}
 
 /*# sourceMappingURL=all.css.map */
