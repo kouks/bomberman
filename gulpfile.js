@@ -25,7 +25,8 @@ elixir(function(mix) {
       /*
        | Mixing JS files by groups (from resources/assets/js too public/js)
        */
-      .scripts(['jquery.min.js', 'main.js'], 'public/js/main.js')
+      .scripts(['jquery.min.js', 'jquery-collision.min.js'], 'public/js/jquery.js')
+      .scripts(['main.js', 'game.js'], 'public/js/main.js')
 
       /*
        | Browser sync plugin <3

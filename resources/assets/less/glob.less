@@ -132,18 +132,22 @@ table.table-simple {
 /**
  * 5.0 - Page contents
  */
+ body {
+  background: #fafafa;
+ }
 
  #map {
   .map-container {
+    height: 416px;
     margin: 50px auto;
-    width: 900px;
-    height: calc(900px / 15 * 13);
+    position: relative;
+    width: 544px;
 
     .tile {
-      width: calc(100% / 15);
-      height: calc(100% / 13);
-      float: left;
       background-size: cover;
+      float: left;
+      height: 32px;
+      width: 32px;
 
       &.floor {
         background: url('/img/texture_floor.jpg') center center;  
@@ -152,6 +156,19 @@ table.table-simple {
       &.wall {
         background: url('/img/texture_wall.jpg') center center;
       }
+
+      &.box {
+        background: url('/img/texture_chest.jpg') center center;        
+      }
+    }
+    .sprite {
+      position: absolute;
+      height: 25px;
+      width: 25px;
+      background: url('/img/3_bomber.png') center center;
+      background-size: cover;
+      left: 32px;
+      top: 32px;
     }
   }
 }

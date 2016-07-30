@@ -21,6 +21,7 @@
 	</div>
 	
 	@section('scripts')
+		<script rel="text/javascript" src="/js/jquery.js"></script>
 		<script rel="text/javascript" src="/js/main.js"></script>
 	@show
 
