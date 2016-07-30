@@ -133,6 +133,25 @@ table.table-simple {
  * 5.0 - Page contents
  */
 
-body {
-  
+ #map {
+  .map-container {
+    margin: 50px auto;
+    width: 900px;
+    height: calc(900px / 15 * 13);
+
+    .tile {
+      width: calc(100% / 15);
+      height: calc(100% / 13);
+      float: left;
+      background-size: cover;
+
+      &.floor {
+        background: url('/img/texture_floor.jpg') center center;  
+      }
+
+      &.wall {
+        background: url('/img/texture_wall.jpg') center center;
+      }
+    }
+  }
 }
