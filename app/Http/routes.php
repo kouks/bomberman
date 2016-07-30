@@ -12,7 +12,4 @@
 */
 
 Route::get('', 'HomeController@index');
-<<<<<<< HEAD
 Route::get('game/{id}', 'HomeController@game');
-=======
->>>>>>> 5dcc35f89a247e18dad445d7f7b9bf266af09126

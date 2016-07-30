@@ -16,16 +16,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $server = IoServer::factory(
-	        new HttpServer(
-	            new WsServer(
-	                new \App\Bomberman\ServerCommunication()
-	            )
-	        ),
-	        8080
-    	);
-
-    	$server->run();
+    	//
     }
 
     /**

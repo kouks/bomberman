@@ -32,4 +32,14 @@ class HomeController extends Controller
 
     	]);
     }
+
+    /**
+     * Runs the server
+     * 
+     * @return void
+     */
+    public function server()
+    {
+    	//
+    }
 }
