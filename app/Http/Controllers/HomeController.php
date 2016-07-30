@@ -8,15 +8,26 @@ use App\Http\Requests;
 
 class HomeController extends Controller
 {
+
+	/**
+	 * Handles index action
+	 * 
+	 * @return View $view The view
+	 */
+	public function index()
+	{
+		return view('home');
+	}
+
     /**
-     * Handles the index pag
+     * Handles the game page
      * 
      * @param  Request $request The http request
      * @return View $view The view
      */
-    public function index(Request $request)
+    public function game(Request $request)
     {
-    	return view('home', [
+    	return view('game', [
 
 
     	]);

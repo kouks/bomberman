@@ -30,6 +30,8 @@ var Sprite = $('.sprite.mine');
 var Speed = 5;
 
 $(() => {
+
+  Sprite.moveTo(32, 128);
   
   /**
    * Starting main game loop

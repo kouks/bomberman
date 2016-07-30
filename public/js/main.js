@@ -30,6 +30,8 @@ var Sprite = $('.sprite.mine');
 var Speed = 5;
 
 $(() => {
+
+  Sprite.moveTo(32, 128);
   
   /**
    * Starting main game loop
@@ -113,8 +115,8 @@ class Entity {
       }
     }
 
-    var Top = Sprite.css('top');
-    var Left = Sprite.css('left');
+    var Top = Sprite.position().top;
+    var Left = Sprite.position().left;
 
     // conn.send();
   }
@@ -126,6 +128,30 @@ class Entity {
   static Speed() {
     return Speed;
   }
+}
+
+/** 
+ * Helpers
+ */
+
+$.fn.moveTo = function(top, left) {
+  
+  if(top instanceof Object) {
+
+    $(this).css({
+      top: top['top'] + 'px',
+      left: top['left'] + 'px'
+    });
+
+    return true;
+  }
+
+  $(this).css({
+    top: top + 'px',
+    left: left + 'px'
+  });
+
+  return true;
 }
 
 //# sourceMappingURL=main.js.map

@@ -295,7 +295,7 @@ body {
 }
 #map .map-container {
   height: 416px;
-  margin: 50px auto;
+  margin: 50px auto 0 auto;
   position: relative;
   width: 544px;
 }
@@ -320,8 +320,6 @@ body {
   width: 25px;
   background: url('/img/3_bomber.png') center center;
   background-size: cover;
-  left: 32px;
-  top: 32px;
 }
 
 /*# sourceMappingURL=all.css.map */
