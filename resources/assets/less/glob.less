@@ -1,0 +1,138 @@
+@import 'reset';
+@import 'variables';
+
+/**
+ * 1.0 - Typography
+ */
+
+/**
+ * 1.1 - Font imports
+ */
+
+@import 'https://fonts.googleapis.com/css?family=Prompt:300,400'; // Headings
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700'; // Shorts paragraphs
+
+/**
+ * 1.2 - Headings
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	margin: 0;
+	text-rendering: optimizeLegibility;
+	font-family: 'Prompt', sans-serif;
+}
+
+/**
+ * 1.3 - Text
+ */
+
+body,
+button,
+input,
+select,
+textarea {
+	color: #222;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.75;
+}
+
+p {
+	margin: 0 0 1.75em;
+}
+
+/**
+ * 2.0 - Tables
+ */
+
+table.table-simple {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	margin-bottom: 20px;
+
+	td {
+		vertical-align: top;
+	}
+
+	thead, tfoot {
+		td {
+			padding: 15px 10px;
+		}
+
+		td.sortable {
+			color: @theme;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		td.asc:after, td.desc:after, td.none:after {
+			font: 400 18px/1 'dashicons';
+			
+		}
+
+		td.asc {
+			&:after {
+				content: ' \f142';
+			}
+
+			&:hover:after {
+				content: ' \f140';
+			}
+		}
+
+		td.none:hover:after {
+			content: ' \f142';
+		}
+
+		td.desc {
+			&:after {
+				content: ' \f140';
+			}
+
+			&:hover:after {
+				content: ' \f142';
+			}
+		}
+
+		tr {
+			background: #fff;
+			border-bottom: 1px solid #ccc;
+		}
+	}
+
+	tfoot tr {
+		border-top: 1px solid #ccc;
+		border-bottom: none;
+	}
+
+	tbody {
+		td {
+			padding: 10px;
+			font-size: 14px;
+		}
+
+		tr {
+			background: #fff;
+		}
+
+		tr:nth-child(odd) {
+			background: #fafafa;
+		}
+
+	}
+}
+
+/**
+ * 5.0 - Page contents
+ */
+
+body {
+  
+}
