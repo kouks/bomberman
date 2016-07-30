@@ -1,3 +1,7 @@
+
+/**
+ * Key codes
+ */
 var Keys = {
   UP:     87, 
   DOWN:   83, 
@@ -5,6 +9,9 @@ var Keys = {
   RIGHT:  68
 };
 
+/**
+ * Key pressed ?
+ */
 var Pressed = {
   87: false,
   84: false,
@@ -12,14 +19,26 @@ var Pressed = {
   68: false
 };
 
-var Sprite = $('.sprite');
+/**
+ * Sprite element
+ */
+var Sprite = $('.sprite.mine');
+
+/**
+ * Sprite speed
+ */
+var Speed = 5;
 
 $(() => {
-  console.log($('#map').has($('.sprite').collision('.wall')).length);
+  
+  /**
+   * Starting main game loop
+   */
+  setInterval(Game.loop, 15);
 
-  setInterval(Game.loop, 50);
-
-
+  /**
+   * Registering key presses
+   */
   $(document).keydown((e) => {
     Pressed[e.which] = true;
   });

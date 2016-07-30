@@ -7,7 +7,7 @@
     	<div class="map-container">
 	        <?php App\Bomberman\Map::generate() ?>
 
-	        <div class="sprite"></div>
+	        <div class="sprite mine"></div>
         </div>
     </main>
 @stop
