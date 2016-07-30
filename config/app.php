@@ -112,6 +112,8 @@ return [
 
     'log_level' => env('APP_LOG_LEVEL', 'debug'),
 
+    'log_file' => __DIR__.'/../app.log',
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
