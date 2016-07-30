@@ -12,7 +12,12 @@ use Ratchet\MessageComponentInterface;
  * @author Michael Bausano
  */
 class ServerCommunication implements MessageComponentInterface
-{		
+{
+	/**
+	 * Storage of users connected to server
+	 *
+	 * @var SplObjectStorage $clients
+	 */
 	protected $clients;
 
 	/**
@@ -37,7 +42,7 @@ class ServerCommunication implements MessageComponentInterface
 		$data = json_decode($json);
 
 		// Data managining and getting a json response
-		$response = $json;
+		$response = $json; #todo obviously
 
 		// Returning a json response to all clients
 		foreach ($this->clients as $client) {
@@ -78,9 +83,7 @@ class ServerCommunication implements MessageComponentInterface
 	{
 		// Saves error message to log
 		$file = new \App\Helpers\File(\Config::get('app.log_file'));
-		$file->addLine(
-		 	'['.date('Y-m-d H:i:s').']: ' . $e->getMessage()
-		)->save();
+		$file->addLogLine($e->getMessage())->save();
 
 		// Closing connection with user
 		$client->close();

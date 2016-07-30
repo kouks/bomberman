@@ -32,14 +32,16 @@ class File
 	}
 
 	/**
-	 * Appends line
+	 * Appends log line
 	 * 
 	 * @param  string $string Line contents
 	 * @return File $this
 	 */
-	public function addLine($string)
+	public function addLogLine($string)
 	{
-		$this->file .= "\n" . $string;
+		if($this->file != '') $this->file .= "\n";
+
+		$this->file .= "[" . date('Y-m-d H:i:s') . "]: " . $string;
 
 		return $this;
 	}
