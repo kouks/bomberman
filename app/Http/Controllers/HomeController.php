@@ -40,6 +40,15 @@ class HomeController extends Controller
      */
     public function server()
     {
-    	//
+    	$server = IoServer::factory(
+    	    new HttpServer(
+    	        new WsServer(
+    	            new \App\Bomberman\ServerCommunication()
+    	        )
+    	    ),
+    	    8080
+    	);
+
+    	$server->run();
     }
 }

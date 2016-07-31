@@ -8,43 +8,36 @@
 class Entity {
   static move() {
 
-    if(Entity.collides()) {
-      return false;
-    }
-
-    var Top = Sprite.css('top');
-    var Left = Sprite.css('left');
-
     if(Pressed[Keys.UP]) {
-      var Position = (Sprite.position().top - Entity.Speed()) + 'px';
-      Sprite.css('top', Position);
-      if(Entity.collides()) {
-        Sprite.css('top', Top);
-      }
+      var Position = (Sprite.position().top - Entity.Speed());
+
+      do {
+        Sprite.css('top', Position++ + 'px');
+      } while(Entity.collides());
     }
     
     if(Pressed[Keys.DOWN]) {
-      var Position = (Sprite.position().top + Entity.Speed()) + 'px';
-      Sprite.css('top', Position);
-      if(Entity.collides()) {
-        Sprite.css('top', Top);
-      }
+      var Position = (Sprite.position().top + Entity.Speed());
+
+      do {
+        Sprite.css('top', Position-- + 'px');
+      } while(Entity.collides());
     }
     
     if(Pressed[Keys.LEFT]) {
-      var Position = (Sprite.position().left - Entity.Speed()) + 'px';
-      Sprite.css('left', Position);
-      if(Entity.collides()) {
-        Sprite.css('left', Left);
-      }
+      var Position = (Sprite.position().left - Entity.Speed());
+
+      do {
+        Sprite.css('left', Position++ + 'px');
+      } while(Entity.collides());
     }
     
     if(Pressed[Keys.RIGHT]) {
-      var Position = (Sprite.position().left + Entity.Speed()) + 'px';
-      Sprite.css('left', Position);
-      if(Entity.collides()) {
-        Sprite.css('left', Left);
-      }
+      var Position = (Sprite.position().left + Entity.Speed());
+
+      do {
+        Sprite.css('left', Position-- + 'px');
+      } while(Entity.collides());
     }
 
     var Top = Sprite.position().top;

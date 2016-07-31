@@ -27,11 +27,15 @@ var Sprite = $('.sprite.mine');
 /**
  * Sprite speed
  */
-var Speed = 5;
+var Speed = 2;
 
 $(() => {
 
-  Sprite.moveTo(32, 128);
+  Sprite.moveTo(32, 32);
+
+  // $.ajax({
+  //   url: '/server'
+  // })
   
   /**
    * Starting main game loop

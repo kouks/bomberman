@@ -13,3 +13,4 @@
 
 Route::get('', 'HomeController@index');
 Route::get('game/{id}', 'HomeController@game');
+Route::get('server', 'HomeController@server');
